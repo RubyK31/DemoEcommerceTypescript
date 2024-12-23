@@ -3,7 +3,7 @@ import { prismaClient } from "..";
 import { hashSync, compareSync } from "bcrypt";
 import * as jwt from "jsonwebtoken";
 import { JWT_SECRET } from "../secrets";
-import { BadRequestsException } from  "../"
+import { BadRequestsException, ErrorCode, NotFoundException } from "../validators/GlobalValidator"
 import { SignUpSchema } from "../schema/users";
 
 
