@@ -1,8 +1,8 @@
 import { Router } from "express"
-import authMiddleware from "../middlewares/auth"
-import { errorHandler } from "../error-handler"
-import { cancelOrder, changeStatus, createOrder, getOrderById, listAllOrders, listOrders, listUserOrders } from "../controllers/orders"
-import adminMiddleware from "../middlewares/admin"
+import authMiddleware from "@middlewares/auth"
+import { errorHandler } from "@errorhandler"
+import { cancelOrder, changeStatus, createOrder, getOrderById, listAllOrders, listOrders, listUserOrders } from "@controllers/orders"
+import adminMiddleware from "@middlewares/admin"
 
 const orderRoutes:Router = Router()
 

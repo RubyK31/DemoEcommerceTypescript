@@ -1,8 +1,8 @@
 import {Router} from 'express';
-import { errorHandler } from '../error-handler';
-import { createProduct, deleteProduct, getProductById, listProduct, searchProducts, updateProduct } from '../controllers/products';
-import authMiddleware from '../middlewares/auth';
-import adminMiddleware from '../middlewares/admin';
+import { errorHandler } from '@errorhandler';
+import { createProduct, deleteProduct, getProductById, listProduct, searchProducts, updateProduct } from '@controllers/products';
+import authMiddleware from '@middlewares/auth';
+import adminMiddleware from '@middlewares/admin';
 
 const productsRoutes: Router = Router()
 

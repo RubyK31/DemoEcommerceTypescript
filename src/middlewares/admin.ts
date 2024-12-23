@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import { UnauthorisedException } from "../exceptions/unauthorised";
-import { ErrorCode } from "../exceptions/root";
+import { UnauthorisedException, ErrorCode } from "@validators/GlobalValidator";
+
 
 const adminMiddleware = async (req: Request, res: Response, next: NextFunction) => {
     const user = req.user

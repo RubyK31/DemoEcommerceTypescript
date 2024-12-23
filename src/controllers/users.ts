@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
-import { AddressSchema, UpdateUserSchema } from "../schema/users"
+import { AddressSchema, UpdateUserSchema } from "@schemas/users"
 import { prismaClient } from '..';
-import { NotFoundException } from '../exceptions/not-found';
-import { ErrorCode } from '../exceptions/root';
-import { Address, User } from '@prisma/client';
-import { BadRequestsException } from '../exceptions/bad-requests';
+
+import { Address } from '@prisma/client';
+import { NotFoundException, ErrorCode, BadRequestsException } from '@validators/GlobalValidator';
+
 
 export const addAddress = async(req:Request, res:Response) =>{
     AddressSchema.parse(req.body)

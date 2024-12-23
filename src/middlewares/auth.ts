@@ -1,10 +1,10 @@
 import { Request, Response, NextFunction } from "express";
-import { UnauthorisedException } from "../exceptions/unauthorised";
-import { ErrorCode } from "../exceptions/root";
+
 import * as jwt from "jsonwebtoken";
-import { JWT_SECRET } from "../secrets";
+import { JWT_SECRET } from "@secrets";
 import { prismaClient } from "..";
 import { CustomJwtPayload } from "../types/express";
+import { UnauthorisedException, ErrorCode } from "@validators/GlobalValidator";
 
 const authMiddleware = async (req: Request, res: Response, next: NextFunction) => {
     const token = req.headers.authorization;

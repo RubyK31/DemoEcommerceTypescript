@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { prismaClient } from "..";
-import { NotFoundException } from "../exceptions/not-found";
-import { ErrorCode } from "../exceptions/root";
+import { NotFoundException, ErrorCode } from "@validators/GlobalValidator";
 
 
 export const createProduct = async(req:Request, res:Response) =>{

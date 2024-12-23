@@ -1,8 +1,7 @@
+import { BadRequestsException, ErrorCode, HttpException, InternalException } from "@validators/GlobalValidator"
 import { Request, Response, NextFunction } from "express"
-import { ErrorCode, HttpException } from "./exceptions/root"
 import { ZodError } from "zod"
-import { BadRequestsException } from "./exceptions/bad-requests"
-import { InternalException } from "./exceptions/internal-exception"
+
 
 export const errorHandler = (method: Function) => {
     return async(req:Request,res:Response, next:NextFunction) => {

@@ -1,6 +1,15 @@
 {
   "compilerOptions": {
     "target": "es6",
+    "baseUrl": ".", // Sets the base directory for resolving non-relative modules
+    "paths": {
+      "@controllers/*": ["src/controllers/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@schemas/*": ["src/schema/*"],
+      "@validators/*": ["src/validators/*"],
+      "@secrets": ["src/secrets"],
+      "@errorhandler": ["src/error-handler"],
+    },
     "module": "commonjs",
     "outDir": "dist",
     "sourceMap": false,
