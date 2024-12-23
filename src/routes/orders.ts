@@ -1,6 +1,6 @@
 import { Router } from "express"
 import authMiddleware from "@middlewares/auth"
-import { errorHandler } from "@errorhandler"
+import { errorHandler } from "@error-handler"
 import { cancelOrder, changeStatus, createOrder, getOrderById, listAllOrders, listOrders, listUserOrders } from "@controllers/orders"
 import adminMiddleware from "@middlewares/admin"
 

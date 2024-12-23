@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { AddressSchema, UpdateUserSchema } from "@schemas/users"
+import { AddressSchema, UpdateUserSchema } from "@schema/users"
 import { prismaClient } from '..';
 
 import { Address } from '@prisma/client';

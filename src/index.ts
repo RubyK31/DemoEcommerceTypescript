@@ -1,9 +1,11 @@
+import 'module-alias/register';
 import * as express from "express";
 import {Express, Request, Response} from "express";
 import { PORT } from "@secrets";
 import rootRouter from "./routes";
 import { PrismaClient } from "@prisma/client";
 import { errorMiddleware } from "@middlewares/errors";
+
 
 const app: Express = express();
 app.use(express.json());

@@ -1,33 +1,24 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "baseUrl": ".", // Sets the base directory for resolving non-relative modules
+    "baseUrl": "./src", // Sets the base directory for resolving non-relative modules
     "paths": {
-      "@controllers/*": ["src/controllers/*"],
-      "@middlewares/*": ["src/middlewares/*"],
-      "@schemas/*": ["src/schema/*"],
-      "@validators/*": ["src/validators/*"],
-      "@secrets": ["src/secrets"],
-      "@errorhandler": ["src/error-handler"],
+      "@controllers/*": ["controllers/*"],
+      "@validators/*": ["validators/*"],
+      "@schema/*": ["schema/*"],
+      "@secrets": ["secrets"],
+      "@middlewares/*": ["middlewares/*"],
+      "@error-handler": ["error-handler"],
+      "@routes/*": ["routes/*"]
     },
     "module": "commonjs",
     "outDir": "dist",
     "sourceMap": false,
     "declaration": true,
     "skipLibCheck": true,
-    "lib": [
-      "es2017.object",
-      "es2015",
-      "es2017",
-      "dom"
-    ],
+    "lib": ["es2017.object", "es2015", "es2017", "dom"],
     "strict": true
   },
-  "include": [
-    "src/**/*.ts",
-    "package.json"
-  ],
-  "exclude": [
-    "node_modules","dist"
-  ]
+  "include": ["src/**/*.ts", "package.json"],
+  "exclude": ["node_modules", "dist"]
 }

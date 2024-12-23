@@ -3,10 +3,8 @@ import { prismaClient } from "..";
 import { hashSync, compareSync } from "bcrypt";
 import * as jwt from "jsonwebtoken";
 import { JWT_SECRET } from "@secrets";
-import { BadRequestsException, ErrorCode, NotFoundException } from "@validators/GlobalValidator"
-import { SignUpSchema } from "@schemas/users";
-
-
+import { SignUpSchema } from "@schema/users";
+import { BadRequestsException, ErrorCode, NotFoundException } from "@validators/GlobalValidator";
 
 export const signup = async (req: Request, res: Response, next: NextFunction) => {
         SignUpSchema.parse(req.body);

@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import { ChangeQuantitySchema, CreateCartSchema } from "@schemas/cart";
+import { ChangeQuantitySchema, CreateCartSchema } from "@schema/cart";
 import { Product } from "@prisma/client";
 import { prismaClient } from "..";
-import { NotFoundException, ErrorCode } from "../validators/GlobalValidator";
+import { NotFoundException, ErrorCode } from "@validators/GlobalValidator";
 
 export const addItemToCart= async (req:Request, res:Response) =>{
     const validatedData = CreateCartSchema.parse(req.body)

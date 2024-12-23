@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { errorHandler } from "@errorhandler";
+import { errorHandler } from "@error-handler";
 import authMiddleware from "@middlewares/auth";
 import { addItemToCart, cartItemsCount, changeQuantity, deletetemFromCart, getCart } from '@controllers/cart'
 const cartRoutes = Router();
