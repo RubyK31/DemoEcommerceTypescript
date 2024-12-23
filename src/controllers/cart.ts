@@ -2,8 +2,6 @@ import { Request, Response } from "express";
 import { ChangeQuantitySchema, CreateCartSchema } from "../schema/cart";
 import { Product } from "@prisma/client";
 import { prismaClient } from "..";
-import { NotFoundException } from "../exceptions/not-found";
-import { ErrorCode } from "../exceptions/root";
 
 export const addItemToCart= async (req:Request, res:Response) =>{
     const validatedData = CreateCartSchema.parse(req.body)
@@ -61,4 +59,13 @@ export const getCart= async (req:Request, res:Response) =>{
         }
     })
     res.json(cart)
+}
+
+export const cartItemsCount = async (req: Request, res: Response) => { 
+    const cartCount = await prismaClient.cartItem.count({
+        where: {
+            userId:req.user.id
+        }
+    })
+    res.json({ count: cartCount });
 }
